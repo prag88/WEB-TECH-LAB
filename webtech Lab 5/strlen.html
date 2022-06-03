@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Enter the Strings</p>
+    <button onclick="input()">click me</button>
+    <script>
+        const disp = (a, len) => {
+            var i
+            for (i = 0; i < a.length; i++) {
+                if (a[i].length == len) {
+                    document.write("<br>" + a[i] + "")
+                }
+            }
+        }
+
+        function input() {
+            var a = []
+            var i
+            for (i = 0; i < 5; i++) {
+                a[i] = String(prompt("Enter the elements " + (i + 1)))
+
+            }
+            document.write("Original Array\n")
+            for (i = 0; i < 5; i++) {
+                document.write(" " + a[i])
+            }
+            var len = prompt("Enter the length")
+            disp(a, len)
+
+        }
+    </script>
+</body>
+
+</html>
